@@ -1,0 +1,1 @@
+export * from './src/app/custom-checkbox/custom-checkbox.module';
