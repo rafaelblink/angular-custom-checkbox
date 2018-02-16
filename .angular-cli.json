@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/pretty-checkbox/dist/pretty-checkbox.min.css",
+        "../node_modules/mdi/css/materialdesignicons.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

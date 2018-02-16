@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CustomCheckboxModule } from './custom-checkbox/custom-checkbox.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -10,7 +12,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, CustomCheckboxModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
