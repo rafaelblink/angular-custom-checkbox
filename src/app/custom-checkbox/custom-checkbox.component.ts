@@ -13,6 +13,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
 
   writeValue(obj: any): void {
     this.isSelected = obj;
+    console.log(obj);
   }
   registerOnChange(fn: any): void {
     this._onChange = fn;
@@ -35,17 +36,14 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.isSelected);
   }
 
   ngAfterViewInit() {
-    console.log(this.isSelected);
   }
 
   toggleCheckbox() {
     this.isSelected = !this.isSelected;
     this._onChange(this.isSelected);
-    console.log(this.isSelected);
   }
 
 }

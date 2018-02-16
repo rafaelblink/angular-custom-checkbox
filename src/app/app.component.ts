@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  isSelected: boolean = true;
+  isSelected: boolean = false;
 }
