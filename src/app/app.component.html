@@ -1,10 +1,40 @@
 <div class="container">
-  <ngx-checkbox [label]="'Checkbox 1'" [colorHex]="'#F500FF'" [colorInside]="'#FFF'" [rounded]="true" [(ngModel)]="isSelected"
-    [icon]="'mdi mdi-check'" name="isSelected"></ngx-checkbox>
-  <pre>{{ isSelected }}</pre>
+
+  <h2>Basic Configuration</h2>
+
+  <ngx-checkbox [label]="'Checkbox 1'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+  <pre class="boolean">{{ isSelected }}</pre>
+  <b>Code:</b>
+  <pre><![CDATA[<ngx-checkbox [label]="'Checkbox 1'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>]]></pre>
+
+  <h4>Colors</h4>
+  <ngx-checkbox [label]="'p-primary'" [color]="'p-primary'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+
+  <ngx-checkbox [label]="'p-success'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+
+  <ngx-checkbox [label]="'p-danger'" [color]="'p-danger'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+
+  <ngx-checkbox [label]="'p-info'" [color]="'p-info'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+
+  <ngx-checkbox [label]="'p-warning'" [color]="'p-warning'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
 
 
-  <ngx-checkbox [label]="'Checkbox 2'" [colorHex]="'#14CCA9'" [colorInside]="'#FFF'" [rounded]="true" [(ngModel)]="isSelected2"
-    [icon]="'fa fa-bolt'" name="isSelected2"></ngx-checkbox>
-  <pre>{{ isSelected2 }}</pre>
+  <h2>Advanced Configuration</h2>
+
+  <ngx-checkbox [label]="'Material Design Icons'" [colorHex]="'#F500FF'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'mdi mdi-check'"
+    [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>
+  <pre class="boolean">{{ isSelected2 }}</pre>
+  <b>Code:</b>
+  <pre><![CDATA[<ngx-checkbox [label]="'Checkbox 2'" [colorHex]="'#F500FF'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'mdi mdi-check'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre>
+
+  <h4>Icons and Colors</h4>
+  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#18CDCA'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'fa fa-check'"
+    [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>
+  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#FF302C'" [colorInside]="'#FFF'" [rounded]="false" [icon]="'fa fa-times'"
+    [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>
+  <br>
+  <br>
+  <b>Code:</b>
+  <pre><![CDATA[  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#18CDCA'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'fa fa-check'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre>
+  <pre><![CDATA[  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#FF302C'" [colorInside]="'#FFF'" [rounded]="false" [icon]="'fa fa-times'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre>
 </div>
