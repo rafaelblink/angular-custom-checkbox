@@ -1,4 +1,10 @@
 <div class="container">
-  <ngx-checkbox [label]="'Teste'" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+  <ngx-checkbox [label]="'Checkbox 1'" [colorHex]="'#F500FF'" [colorInside]="'#FFF'" [rounded]="true" [(ngModel)]="isSelected"
+    [icon]="'mdi mdi-check'" name="isSelected"></ngx-checkbox>
   <pre>{{ isSelected }}</pre>
+
+
+  <ngx-checkbox [label]="'Checkbox 2'" [colorHex]="'#14CCA9'" [colorInside]="'#FFF'" [rounded]="true" [(ngModel)]="isSelected2"
+    [icon]="'fa fa-bolt'" name="isSelected2"></ngx-checkbox>
+  <pre>{{ isSelected2 }}</pre>
 </div>

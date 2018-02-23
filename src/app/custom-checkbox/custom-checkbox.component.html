@@ -1,7 +1,7 @@
-<div (click)="toggleCheckbox()" class="pretty p-icon p-round p-smooth">
+<div (click)="toggleCheckbox()" [class]="styleCheckBox">
   <input [value]="isSelected" type="checkbox" [checked]="isSelected" />
-  <div class="state p-success">
-    <i class="icon mdi mdi-check"></i>
+  <div [class]="styleColor">
+    <i [class]="this.styleIcon" [style.background]="colorHex" [style.color]="colorInside"></i>
     <label>{{ label }}</label>
   </div>
 </div>

@@ -30,12 +30,32 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   private _onTouched = () => { };
 
   @Input() label: String;
+  @Input() icon: string;
+  @Input() rounded?: boolean = false;
+  @Input() color?: string;
+  @Input() colorHex?: string;
+  @Input() colorInside?: string;
 
   isSelected: boolean;
-
+  styleCheckBox: String;
+  styleColor: String;
+  styleIcon: String;
   constructor() { }
 
   ngOnInit() {
+    
+    // STYLE CHECKBOX
+    this.styleCheckBox = 'pretty p-icon p-smooth';
+    if (this.rounded) this.styleCheckBox += ' p-round';
+    //if (this.curved) this.styleCheckBox += ' p-curve';
+    
+    // COLORS CHECKBOX
+    this.styleColor = 'state ';
+    if (this.color) this.styleColor += this.color;
+    
+    this.styleIcon = 'icon ';
+    if(this.icon) this.styleIcon += this.icon;
+    
   }
 
   ngAfterViewInit() {
