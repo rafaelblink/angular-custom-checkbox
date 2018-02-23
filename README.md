@@ -6,6 +6,10 @@ This is a very simple library to create custom checkboxes to Angular 2+ projects
 
 **PS: This library use [pretty-checkbox](https://lokesh-coder.github.io/pretty-checkbox) to create the customs checkboxes.**
 
+## Demo
+
+http://rafaelferreira.info/angular-custom-checkbox/
+
 ## Quick start
 
 - Install with [npm](https://www.npmjs.com/).
