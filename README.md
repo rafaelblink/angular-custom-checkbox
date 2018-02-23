@@ -1,4 +1,6 @@
-# Angular Custom Checkbox
+# Angular Custom Checkbox 
+
+[![NPM](https://nodei.co/npm/angular-custom-checkbox.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/angular-custom-checkbox/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
 
