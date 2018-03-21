@@ -1,7 +1,7 @@
 <div (click)="toggleCheckbox()" [class]="styleCheckBox">
   <input [value]="isSelected" type="checkbox" [checked]="isSelected" />
   <div [class]="styleColor">
-    <i [class]="this.styleIcon" [style.background]="colorHex" [style.color]="colorInside"></i>
+    <i [class]="styleIcon" [style.background]="configuration.colorHex" [style.color]="configuration.colorInside"></i>
     <label>{{ label }}</label>
   </div>
 </div>

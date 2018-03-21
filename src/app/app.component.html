@@ -2,12 +2,12 @@
 
   <h2>Basic Configuration</h2>
 
-  <ngx-checkbox [label]="'Checkbox 1'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+  <ngx-checkbox [configuration]="jsonModel" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
   <pre class="boolean">{{ isSelected }}</pre>
   <b>Code:</b>
   <pre><![CDATA[<ngx-checkbox [label]="'Checkbox 1'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>]]></pre>
 
-  <h4>Colors</h4>
+  <!-- <h4>Colors</h4>
   <ngx-checkbox [label]="'p-primary'" [color]="'p-primary'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
 
   <ngx-checkbox [label]="'p-success'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
@@ -36,5 +36,5 @@
   <br>
   <b>Code:</b>
   <pre><![CDATA[  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#18CDCA'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'fa fa-check'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre>
-  <pre><![CDATA[  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#FF302C'" [colorInside]="'#FFF'" [rounded]="false" [icon]="'fa fa-times'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre>
+  <pre><![CDATA[  <ngx-checkbox [label]="'Font-Awesome'" [colorHex]="'#FF302C'" [colorInside]="'#FFF'" [rounded]="false" [icon]="'fa fa-times'" [(ngModel)]="isSelected2" name="isSelected2"></ngx-checkbox>]]></pre> -->
 </div>

@@ -1,19 +1,33 @@
-import { Component, OnInit, Input, ViewChild, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR, NgModel, ControlValueAccessor } from '@angular/forms';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  forwardRef
+} from '@angular/core';
+import {
+  NG_VALUE_ACCESSOR,
+  NgModel,
+  ControlValueAccessor
+} from '@angular/forms';
+import {
+  CustomCheckBoxModel
+} from './custom-checkbox.model';
 
 @Component({
   selector: 'ngx-checkbox',
   templateUrl: './custom-checkbox.component.html',
   styleUrls: ['./custom-checkbox.component.css'],
-  providers: [
-    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => CustomCheckboxComponent), multi: true }
-  ]
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => CustomCheckboxComponent),
+    multi: true
+  }]
 })
 export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
 
   writeValue(obj: any): void {
     this.isSelected = obj;
-    console.log(obj);
   }
   registerOnChange(fn: any): void {
     this._onChange = fn;
@@ -21,45 +35,43 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: any): void {
     this._onTouched = fn;
   }
-  setDisabledState?(isDisabled: boolean): void {
-  }
+  setDisabledState ? (isDisabled: boolean) : void {}
 
   // call if value was changed inside our component
-  private _onChange = (_: any) => { };
+  private _onChange = (_: any) => {};
   // call if input was "touched" .. !
-  private _onTouched = () => { };
+  private _onTouched = () => {};
 
-  @Input() label: String;
-  @Input() icon: string;
-  @Input() rounded?: boolean = false;
-  @Input() color?: string;
-  @Input() colorHex?: string;
-  @Input() colorInside?: string;
+  // @Input() label: String;
+  // @Input() icon: string;
+  // @Input() rounded ? : boolean = false;
+  // @Input() color ? : string;
+  // @Input() colorHex ? : string;
+  // @Input() colorInside ? : string;
+  @Input() configuration: CustomCheckBoxModel;
 
   isSelected: boolean;
   styleCheckBox: String;
   styleColor: String;
   styleIcon: String;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    
+    console.log(this.configuration);
     // STYLE CHECKBOX
     this.styleCheckBox = 'pretty p-icon p-smooth';
-    if (this.rounded) this.styleCheckBox += ' p-round';
-    //if (this.curved) this.styleCheckBox += ' p-curve';
-    
+
+    if (this.configuration.rounded) this.styleCheckBox += ' p-round';
+
     // COLORS CHECKBOX
     this.styleColor = 'state ';
-    if (this.color) this.styleColor += this.color;
-    
+    if (this.configuration.color) this.styleColor = `${this.styleColor}${this.configuration.color}`;
+
     this.styleIcon = 'icon ';
-    if(this.icon) this.styleIcon += this.icon;
-    
+    if (this.configuration.icon) this.styleIcon = `${this.styleIcon}${this.configuration.icon}`;
   }
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {}
 
   toggleCheckbox() {
     this.isSelected = !this.isSelected;
