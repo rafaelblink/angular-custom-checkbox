@@ -1,8 +1,8 @@
-# Angular Custom Checkbox
+# Angular Custom Checkbox 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
+[![NPM](https://nodei.co/npm/angular-custom-checkbox.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/angular-custom-checkbox/)
 
-This is a very simple library to create custom checkboxes to Angular 2+ projects.
+This is a very simple library to create custom checkboxes with Angular 2+ projects.
 
 **PS: This library use [pretty-checkbox](https://lokesh-coder.github.io/pretty-checkbox) to create the customs checkboxes.**
 
