@@ -13,6 +13,9 @@ export class AppExampleComponent implements OnInit  {
   isSelected: boolean = false;
   configuration: CustomCheckBoxModel = new CustomCheckBoxModel();´
   ...
+  ngOnInit() {
+    this.configuration.color = 'p-primary';
+  }
 }]]></pre>
   <b>HTML:</b>
   <pre><![CDATA[<ngx-checkbox [configuration]="configuration" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>]]></pre>  
