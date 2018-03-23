@@ -60,6 +60,7 @@ var AppComponent = (function () {
         this.configurationCustom = new __WEBPACK_IMPORTED_MODULE_1__custom_checkbox_custom_checkbox_model__["a" /* CustomCheckBoxModel */]();
     }
     AppComponent.prototype.ngOnInit = function () {
+        this.jsonModel.color = 'p-primary';
         this.configurationPrimary.color = 'p-primary';
         this.configurationSuccess.color = 'p-success';
         this.configurationDanger.color = 'p-danger';
@@ -180,7 +181,6 @@ var CustomCheckboxComponent = (function () {
     };
     CustomCheckboxComponent.prototype.setDisabledState = function (isDisabled) { };
     CustomCheckboxComponent.prototype.ngOnInit = function () {
-        console.log(this.configuration);
         // STYLE CHECKBOX
         this.styleCheckBox = 'pretty p-icon p-smooth';
         if (this.configuration.rounded)
@@ -194,7 +194,7 @@ var CustomCheckboxComponent = (function () {
             this.styleIcon = "" + this.styleIcon + this.configuration.icon;
         }
         else {
-            this.styleIcon = this.styleIcon + " mdi mdi-check";
+            this.styleIcon = "" + this.styleIcon;
         }
     };
     CustomCheckboxComponent.prototype.ngAfterViewInit = function () { };
