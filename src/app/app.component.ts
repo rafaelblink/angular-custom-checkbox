@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   jsonModel: CustomCheckBoxModel;
 
   ngOnInit() {
-    this.jsonModel = new CustomCheckBoxModel('Test', 'fa fa-check', true, 'p-success', null, '#FFF');
+    this.jsonModel = new CustomCheckBoxModel();
+    this.jsonModel.icon = 'fa fa-pencil';
+    this.jsonModel.color = 'p-danger';
   }
 }

@@ -68,7 +68,12 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
     if (this.configuration.color) this.styleColor = `${this.styleColor}${this.configuration.color}`;
 
     this.styleIcon = 'icon ';
-    if (this.configuration.icon) this.styleIcon = `${this.styleIcon}${this.configuration.icon}`;
+    if (this.configuration.icon) {
+      this.styleIcon = `${this.styleIcon}${this.configuration.icon}`;
+    }
+    else {
+      this.styleIcon = `${this.styleIcon} fa fa-check`
+    }
   }
 
   ngAfterViewInit() {}
