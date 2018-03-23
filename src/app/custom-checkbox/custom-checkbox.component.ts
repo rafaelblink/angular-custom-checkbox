@@ -72,7 +72,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
       this.styleIcon = `${this.styleIcon}${this.configuration.icon}`;
     }
     else {
-      this.styleIcon = `${this.styleIcon} fa fa-check`
+      this.styleIcon = `${this.styleIcon} mdi mdi-check`
     }
   }
 

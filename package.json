@@ -1,7 +1,12 @@
 {
   "name": "angular-custom-checkbox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
+  "homepage": "http://rafaelferreira.info/angular-custom-checkbox/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelblink/angular-custom-checkbox"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

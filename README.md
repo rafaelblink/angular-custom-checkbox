@@ -38,8 +38,20 @@ Let's go create the first checkbox.
 
 ## Basic Configuration
 
+### TS
 ```bash
-<ngx-checkbox [label]="'Checkbox 1'" [color]="'p-success'" [rounded]="true" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+import { CustomCheckBoxModel } from 'angular-custom-checkbox';
+...
+
+export class AppExampleComponent implements OnInit  {  
+  isSelected: boolean = false;
+  jsonModel: CustomCheckBoxModel = new CustomCheckBoxModel();
+}
+
+```
+### HTML
+```bash
+<ngx-checkbox [configuration]="jsonModel" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
 ```
 
 **PS: Use variable on ngModel as boolean.**
@@ -55,7 +67,10 @@ Let's go create the first checkbox.
 ## Advanced Configuration
 
 ```bash
-<ngx-checkbox [label]="'Checkbox 2'" [colorHex]="'#F500FF'" [colorInside]="'#FFF'" [rounded]="true" [icon]="'mdi mdi-check'" [(ngModel)]="isSelected" name="isSelected"></ngx-checkbox>
+this.jsonModel.color = 'p-success';
+this.jsonModel.colorHex = '#F500FF';
+this.jsonModel.rounded = true;
+this.jsonModel.icon = 'mdi mdi-check';
 ```
 
 ## Icons:
@@ -81,4 +96,8 @@ Import the css files to your ``.angular-cli.json`` like:
 ],
 ```
 
-And use for example: ``[icon]="'fa fa-check'"``.
+And use for example: 
+
+```bash 
+this.jsonModel.icon = 'fa fa-check';
+```
