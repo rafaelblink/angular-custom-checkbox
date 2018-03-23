@@ -56,8 +56,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   styleIcon: String;
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.configuration);
+  ngOnInit() {    
     // STYLE CHECKBOX
     this.styleCheckBox = 'pretty p-icon p-smooth';
 
@@ -72,7 +71,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
       this.styleIcon = `${this.styleIcon}${this.configuration.icon}`;
     }
     else {
-      this.styleIcon = `${this.styleIcon} mdi mdi-check`
+      this.styleIcon = `${this.styleIcon}`;
     }
   }
 

@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   configurationCustom: CustomCheckBoxModel = new CustomCheckBoxModel();
 
   ngOnInit() {
+    this.jsonModel.color = 'p-primary';
     this.configurationPrimary.color = 'p-primary';
     this.configurationSuccess.color = 'p-success';
     this.configurationDanger.color = 'p-danger';
