@@ -1,5 +1,5 @@
 <div (click)="toggleCheckbox()" [class]="styleCheckBox">
-  <input [value]="isSelected" type="checkbox" [checked]="isSelected" />
+  <input [value]="isSelected" type="checkbox" [checked]="isSelected" [disabled]="disabled" />
   <div [class]="styleColor">
     <i [class]="styleIcon" [style.background]="configuration.colorHex" [style.color]="configuration.colorInside"></i>
     <label></label>

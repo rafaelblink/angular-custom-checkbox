@@ -49,11 +49,12 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   // @Input() colorHex ? : string;
   // @Input() colorInside ? : string;
   @Input() configuration: CustomCheckBoxModel;
+  @Input() disabled: boolean = false;
 
   isSelected: boolean;
   styleCheckBox: String;
   styleColor: String;
-  styleIcon: String;
+  styleIcon: String;z
   constructor() {}
 
   ngOnInit() {    
@@ -78,6 +79,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   ngAfterViewInit() {}
 
   toggleCheckbox() {
+    if (this.disabled) return;
     this.isSelected = !this.isSelected;
     this._onChange(this.isSelected);
   }
