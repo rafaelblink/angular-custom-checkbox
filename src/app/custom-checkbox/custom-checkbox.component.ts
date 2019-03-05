@@ -54,7 +54,7 @@ export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
   isSelected: boolean;
   styleCheckBox: String;
   styleColor: String;
-  styleIcon: String;z
+  styleIcon: String;
   constructor() {}
 
   ngOnInit() {    
