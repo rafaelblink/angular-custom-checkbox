@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
-import { CustomCheckboxModule } from './custom-checkbox/custom-checkbox.module';
+import { CustomCheckboxModule } from 'projects/custom-checkbox/src/public_api';
 import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent
   ],
   imports: [
-    BrowserModule, CustomCheckboxModule, FormsModule
+    BrowserModule,
+    CustomCheckboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
