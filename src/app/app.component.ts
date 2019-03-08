@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomCheckBoxModel } from './custom-checkbox/custom-checkbox.model';
+import { CustomCheckBoxModel } from 'projects/custom-checkbox/src/lib/custom-checkbox.model';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent implements OnInit {
